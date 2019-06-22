@@ -56,6 +56,9 @@ public class SurveyCompletedActivity extends AppCompatActivity {
 }
 
 
+     //preferences.setReqLogin("http://43.245.131.159/cmapp/Testing/check_user_id");
+    //preferences.setReq1("http://43.245.131.159/cmapp/Testing/insert_monitoring");
+
 class  SurveyCompletedCustomAdapter extends RecyclerView.Adapter{
 
     Context mContext;

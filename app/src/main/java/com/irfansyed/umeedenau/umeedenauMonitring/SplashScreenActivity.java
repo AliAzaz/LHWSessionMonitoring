@@ -24,16 +24,17 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         final MyPreferences preferences = new MyPreferences(this);
     //    if (preferences.getReq1() == null) {
-         //  preferences.setReq1("http://43.245.131.159/umeed/Monitoring");
 
 
-        preferences.setReq1("http://10.198.97.189:61259///Testing/insert_info");
+
+     //   preferences.setReq1("http://192.168.1.116:61259///Testing/insert_monitoring");
 
 
-     //   preferences.setReqLogin("http://10.198.96.124:61259/Testing/check_user_id");
+        //   preferences.setReqLogin("http://192.168.1.116:61259///Testing/check_user_id");
 
-        //    preferences.setReq1("http://43.245.131.159/umeed/Testing/Monitoring");
-            preferences.setReqLogin("http://10.198.97.189:61259///Testing/check_user_id");
+
+      preferences.setReqLogin("http://43.245.131.159/cmapp/Testing/check_user_id");
+      preferences.setReq1("http://43.245.131.159/cmapp/Testing/insert_monitoring");
 
      //   }
         new Handler().postDelayed(new Runnable() {
@@ -48,8 +49,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                 } else {
                   //  mainIntent = new Intent(SplashScreenActivity.this, HomeActivity.class);
                 }
-                    //mainIntent = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                    mainIntent = new Intent(SplashScreenActivity.this, HomeActivity.class);
+                    mainIntent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                   // mainIntent = new Intent(SplashScreenActivity.this, HomeActivity.class);
 
                     SplashScreenActivity.this.startActivity(mainIntent);
                     SplashScreenActivity.this.finish();

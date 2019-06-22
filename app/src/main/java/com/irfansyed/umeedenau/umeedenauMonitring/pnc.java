@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -18,19 +20,13 @@ import java.util.Date;
 
 import data.LocalDataManager;
 import data.col_A;
+import utils.ClearAllcontrol;
 import utils.LocationHelper;
 
 import static data.LocalDataManager.database;
 
 
-public  class pnc extends AppCompatActivity implements View.OnClickListener {
-
-
-
-
-
-
-
+public class pnc extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
 
 
     col_A obj_tbl;
@@ -48,13 +44,9 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
             Lv_PNC5,
             Lv_PNC6,
             Lv_PNC7,
-            Lv_PNC8,
-            Lv_PNC9,
-            Lv_PNC10,
-            Lv_PNC11,
-            Lv_PNC12;
-
-
+            Lv_PNC5_1,
+            Lv_PNC5_2,
+            Lv_PNC5_3;
 
 
     RadioButton
@@ -66,11 +58,9 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
             rb_PNC5_yes,
             rb_PNC6_yes,
             rb_PNC7_yes,
-            rb_PNC8_yes,
-            rb_PNC9_yes,
-            rb_PNC10_yes,
-            rb_PNC11_yes,
-            rb_PNC12_yes,
+            rb_PNC5_1_yes,
+            rb_PNC5_2_yes,
+            rb_PNC5_3_yes,
             rb_PNC1_no,
             rb_PNC2_no,
             rb_PNC3_no,
@@ -78,11 +68,9 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
             rb_PNC5_no,
             rb_PNC6_no,
             rb_PNC7_no,
-            rb_PNC8_no,
-            rb_PNC9_no,
-            rb_PNC10_no,
-            rb_PNC11_no,
-            rb_PNC12_no;
+            rb_PNC5_1_no,
+            rb_PNC5_2_no,
+            rb_PNC5_3_no;
 
 
     Button btn_next;
@@ -95,12 +83,9 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
             PNC5,
             PNC6,
             PNC7,
-            PNC8,
-            PNC9,
-            PNC10,
-            PNC11,
-            PNC12;
-
+            PNC5_1,
+            PNC5_2,
+            PNC5_3;
 
 
     @Override
@@ -110,302 +95,207 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
         fun_intia_view();
 
 
-
-
-
-
         fun_intia_view();
-
 
 
         btn_next.setOnClickListener(this);
 
-
+        rb_PNC4_yes.setOnCheckedChangeListener(this);
+        rb_PNC4_no.setOnCheckedChangeListener(this);
 
 
     }
 
 
-
-
-
-
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
 
 
-        if(view.getId()==R.id.btn_next_PNC)
-        {
+        if (view.getId() == R.id.btn_next_PNC) {
 
-            if(yes_we_are_ok()==true)
-            {
+            if (yes_we_are_ok() == true) {
                 this.fun_asignment();
                 insertdata();
                 this.next_step();
-                Intent itt=new Intent(this,finall.class);
-                itt.putExtra("put_extra",3);
-                startActivity(itt);
-                this.finish();
+                //   Intent itt=new Intent(this,finall.class);
+                //  itt.putExtra("put_extra",3);
+                //  startActivity(itt);
+                Insert_remarks();
 
 
-            }
-
-            else
-            {
-                Toast.makeText(this,"Some thing is missing! please Review your form.",Toast.LENGTH_LONG);
+            } else {
+                Toast.makeText(this, "Some thing is missing! please Review your form.", Toast.LENGTH_LONG);
             }
 
         }
 
 
     }
-
-
-
-
-
-
-
 
 
     // initilalzie VIews
 
-    public void fun_intia_view()
-    {
-        Lv_PNC1=(LinearLayout) findViewById(R.id.Lv_PNC1);
-        Lv_PNC2=(LinearLayout) findViewById(R.id.Lv_PNC2);
-        Lv_PNC3=(LinearLayout) findViewById(R.id.Lv_PNC3);
-        Lv_PNC4=(LinearLayout) findViewById(R.id.Lv_PNC4);
-        Lv_PNC5=(LinearLayout) findViewById(R.id.Lv_PNC5);
-        Lv_PNC6=(LinearLayout) findViewById(R.id.Lv_PNC6);
-        Lv_PNC7=(LinearLayout) findViewById(R.id.Lv_PNC7);
-        Lv_PNC8=(LinearLayout) findViewById(R.id.Lv_PNC8);
-        Lv_PNC9=(LinearLayout) findViewById(R.id.Lv_PNC9);
-        Lv_PNC10=(LinearLayout) findViewById(R.id.Lv_PNC10);
-        Lv_PNC11=(LinearLayout) findViewById(R.id.Lv_PNC11);
-        Lv_PNC12=(LinearLayout) findViewById(R.id.Lv_PNC12);
+    public void fun_intia_view() {
+        Lv_PNC1 = (LinearLayout) findViewById(R.id.Lv_PNC1);
+        Lv_PNC2 = (LinearLayout) findViewById(R.id.Lv_PNC2);
+        Lv_PNC3 = (LinearLayout) findViewById(R.id.Lv_PNC3);
+        Lv_PNC4 = (LinearLayout) findViewById(R.id.Lv_PNC4);
+        Lv_PNC5 = (LinearLayout) findViewById(R.id.Lv_PNC5);
+        Lv_PNC6 = (LinearLayout) findViewById(R.id.Lv_PNC6);
+        Lv_PNC7 = (LinearLayout) findViewById(R.id.Lv_PNC7);
+        Lv_PNC5_1 = (LinearLayout) findViewById(R.id.Lv_PNC5_1);
+        Lv_PNC5_2 = (LinearLayout) findViewById(R.id.Lv_PNC5_2);
+        Lv_PNC5_3 = (LinearLayout) findViewById(R.id.Lv_PNC5_3);
 
 
-        rb_PNC1_yes=(RadioButton)findViewById(R.id.rb_PNC1_yes);
-        rb_PNC2_yes=(RadioButton)findViewById(R.id.rb_PNC2_yes);
-        rb_PNC3_yes=(RadioButton)findViewById(R.id.rb_PNC3_yes);
-        rb_PNC4_yes=(RadioButton)findViewById(R.id.rb_PNC4_yes);
-        rb_PNC5_yes=(RadioButton)findViewById(R.id.rb_PNC5_yes);
-        rb_PNC6_yes=(RadioButton)findViewById(R.id.rb_PNC6_yes);
-        rb_PNC7_yes=(RadioButton)findViewById(R.id.rb_PNC7_yes);
-        rb_PNC8_yes=(RadioButton)findViewById(R.id.rb_PNC8_yes);
-        rb_PNC9_yes=(RadioButton)findViewById(R.id.rb_PNC9_yes);
-        rb_PNC10_yes=(RadioButton)findViewById(R.id.rb_PNC10_yes);
-        rb_PNC11_yes=(RadioButton)findViewById(R.id.rb_PNC11_yes);
-        rb_PNC12_yes=(RadioButton)findViewById(R.id.rb_PNC12_yes);
-
-        rb_PNC1_no=(RadioButton)findViewById(R.id.rb_PNC1_no);
-        rb_PNC2_no=(RadioButton)findViewById(R.id.rb_PNC2_no);
-        rb_PNC3_no=(RadioButton)findViewById(R.id.rb_PNC3_no);
-        rb_PNC4_no=(RadioButton)findViewById(R.id.rb_PNC4_no);
-        rb_PNC5_no=(RadioButton)findViewById(R.id.rb_PNC5_no);
-        rb_PNC6_no=(RadioButton)findViewById(R.id.rb_PNC6_no);
-        rb_PNC7_no=(RadioButton)findViewById(R.id.rb_PNC7_no);
-        rb_PNC8_no=(RadioButton)findViewById(R.id.rb_PNC8_no);
-        rb_PNC9_no=(RadioButton)findViewById(R.id.rb_PNC9_no);
-        rb_PNC10_no=(RadioButton)findViewById(R.id.rb_PNC10_no);
-        rb_PNC11_no=(RadioButton)findViewById(R.id.rb_PNC11_no);
-        rb_PNC12_no=(RadioButton)findViewById(R.id.rb_PNC12_no);
+        rb_PNC1_yes = (RadioButton) findViewById(R.id.rb_PNC1_yes);
+        rb_PNC2_yes = (RadioButton) findViewById(R.id.rb_PNC2_yes);
+        rb_PNC3_yes = (RadioButton) findViewById(R.id.rb_PNC3_yes);
+        rb_PNC4_yes = (RadioButton) findViewById(R.id.rb_PNC4_yes);
+        rb_PNC5_yes = (RadioButton) findViewById(R.id.rb_PNC5_yes);
+        rb_PNC6_yes = (RadioButton) findViewById(R.id.rb_PNC6_yes);
+        rb_PNC7_yes = (RadioButton) findViewById(R.id.rb_PNC7_yes);
+        rb_PNC5_1_yes = (RadioButton) findViewById(R.id.rb_PNC5_1_yes);
+        rb_PNC5_2_yes = (RadioButton) findViewById(R.id.rb_PNC5_2_yes);
+        rb_PNC5_3_yes = (RadioButton) findViewById(R.id.rb_PNC5_3_yes);
 
 
-        btn_next=(Button)findViewById(R.id.btn_next_PNC);
+        rb_PNC1_no = (RadioButton) findViewById(R.id.rb_PNC1_no);
+        rb_PNC2_no = (RadioButton) findViewById(R.id.rb_PNC2_no);
+        rb_PNC3_no = (RadioButton) findViewById(R.id.rb_PNC3_no);
+        rb_PNC4_no = (RadioButton) findViewById(R.id.rb_PNC4_no);
+        rb_PNC5_no = (RadioButton) findViewById(R.id.rb_PNC5_no);
+        rb_PNC6_no = (RadioButton) findViewById(R.id.rb_PNC6_no);
+        rb_PNC7_no = (RadioButton) findViewById(R.id.rb_PNC7_no);
+        rb_PNC5_1_no = (RadioButton) findViewById(R.id.rb_PNC5_1_no);
+        rb_PNC5_2_no = (RadioButton) findViewById(R.id.rb_PNC5_2_no);
+        rb_PNC5_3_no = (RadioButton) findViewById(R.id.rb_PNC5_3_no);
 
+
+        btn_next = (Button) findViewById(R.id.btn_next_PNC);
 
 
     }
 
 
-    public  boolean yes_we_are_ok()
-    {
+    public boolean yes_we_are_ok() {
 
-        if( fun_avioid_empty_text(Lv_PNC1)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC1) == false) {
+            return false;
         }
 
-        if( fun_avioid_empty_text(Lv_PNC2)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC2) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC3)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC3) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC4)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC4) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC5)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC5) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC6)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC6) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC7)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC7) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC8)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC5_1) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC9)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC5_2) == false) {
+            return false;
         }
-        if( fun_avioid_empty_text(Lv_PNC10)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_PNC11)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_PNC12)==false)
-        {
-            return  false;
+        if (fun_avioid_empty_text(Lv_PNC5_3) == false) {
+            return false;
         }
 
 
-
-        return  true;
+        return true;
     }
 
 
-
-    public  boolean fun_avioid_empty_text(LinearLayout lv)
-    {
-        Boolean Yes_iam_good=true;
-        Yes_iam_good=Gothrough.IamHiden(lv);
-        if(Yes_iam_good==false)
-        {
-            return  false;
+    public boolean fun_avioid_empty_text(LinearLayout lv) {
+        Boolean Yes_iam_good = true;
+        Yes_iam_good = Gothrough.IamHiden(lv);
+        if (Yes_iam_good == false) {
+            return false;
         }
 
         return true;
     }
 
-    public  void fun_asignment()
-    {
+    public void fun_asignment() {
 
-       PNC1="0";
-       PNC2="0";
-       PNC3="0";
-       PNC4="0";
-       PNC5="0";
-       PNC6="0";
-       PNC7="0";
-       PNC8="0";
-       PNC9="0";
-       PNC10="0";
-       PNC11="0";
-       PNC12="0";
+        PNC1 = "0";
+        PNC2 = "0";
+        PNC3 = "0";
+        PNC4 = "0";
+        PNC5 = "0";
+        PNC6 = "0";
+        PNC7 = "0";
+        PNC5_1 = "0";
+        PNC5_2 = "0";
+        PNC5_3 = "0";
 
 
-        if(rb_PNC1_yes.isChecked())
-        {
-            PNC1="1";
+        if (rb_PNC1_yes.isChecked()) {
+            PNC1 = "1";
         }
-        if(rb_PNC2_yes.isChecked())
-        {
-            PNC2="1";
+        if (rb_PNC2_yes.isChecked()) {
+            PNC2 = "1";
         }
-        if(rb_PNC3_yes.isChecked())
-        {
-            PNC3="1";
+        if (rb_PNC3_yes.isChecked()) {
+            PNC3 = "1";
         }
-        if(rb_PNC4_yes.isChecked())
-        {
-            PNC4="1";
+        if (rb_PNC4_yes.isChecked()) {
+            PNC4 = "1";
         }
-        if(rb_PNC5_yes.isChecked())
-        {
-            PNC5="1";
+        if (rb_PNC5_yes.isChecked()) {
+            PNC5 = "1";
         }
-        if(rb_PNC6_yes.isChecked())
-        {
-            PNC6="1";
+        if (rb_PNC6_yes.isChecked()) {
+            PNC6 = "1";
         }
-        if(rb_PNC7_yes.isChecked())
-        {
-            PNC7="1";
+        if (rb_PNC7_yes.isChecked()) {
+            PNC7 = "1";
         }
-        if(rb_PNC8_yes.isChecked())
-        {
-            PNC8="1";
+        if (rb_PNC5_1_yes.isChecked()) {
+            PNC5_1 = "1";
         }
-        if(rb_PNC9_yes.isChecked())
-        {
-            PNC9="1";
+        if (rb_PNC5_2_yes.isChecked()) {
+            PNC5_2 = "1";
         }
 
-        if(rb_PNC10_yes.isChecked())
-        {
-            PNC10="1";
+        if (rb_PNC5_3_yes.isChecked()) {
+            PNC5_3 = "1";
         }
-        if(rb_PNC11_yes.isChecked())
-        {
-            PNC11="1";
-        }
-        if(rb_PNC12_yes.isChecked())
-        {
-            PNC12="1";
-        }
-
-
-
-
-
-
-
-
 
 
     }
 
 
-
-
-
-
     public void insertdata() {
 
 
-
-
-
-
-
-
-
         String query = "Update  " +
-                "ttable set "+
+                "ttable set " +
 
-                "PNC1='"+PNC1+"',"+
-                "PNC2='"+PNC2+"',"+
-                "PNC3='"+PNC3+"',"+
-                "PNC4='"+PNC4+"',"+
-                "PNC5='"+PNC5+"',"+
-                "PNC6='"+PNC6+"',"+
-                "PNC7='"+PNC7+"',"+
-                "PNC8='"+PNC8+"',"+
-                "PNC9='"+PNC9+"',"+
-                "PNC10='"+PNC10+"',"+
-                "PNC11='"+PNC11+"',"+
-                "PNC12='"+PNC12+"'"+
+                "PNC1='" + PNC1 + "'," +
+                "PNC2='" + PNC2 + "'," +
+                "PNC3='" + PNC3 + "'," +
+                "PNC4='" + PNC4 + "'," +
+                "PNC5='" + PNC5 + "'," +
+                "PNC6='" + PNC6 + "'," +
+                "PNC7='" + PNC7 + "'," +
+                "PNC5_1='" + PNC5_1 + "'," +
+                "PNC5_2='" + PNC5_2 + "'," +
+                "PNC5_3='" + PNC5_3 + "'" +
 
 
-                " where id="+globale.db_pk;
-
-
+                " where id=" + globale.db_pk;
 
 
         query = String.format(query);
@@ -419,7 +309,6 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
 
 
     }
-
 
 
     @Override
@@ -438,8 +327,7 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 pnc.super.onBackPressed();
 
 
@@ -449,10 +337,130 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
 
         btnPending.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View view) {
+
+                b.cancel();
+
+            }
+        });
+
+
+        //show dialog
+        b.show();
+
+    }
+
+    void next_step() {
+        //   globale.PNC1= PNC1;
+        //   globale.PNC2= PNC2;
+        //   globale.PNC3= PNC3;
+        //   globale.PNC4= PNC4;
+        //   globale.PNC5= PNC5;
+        //   globale.PNC6= PNC6;
+        //   globale.PNC7= PNC7;
+        //   globale.PNC5_1= PNC5_1;
+        //   globale.PNC5_2= PNC5_2;
+        //   globale.PNC5_3=PNC5_3;
+        //   globale.PNC11=PNC11;
+        //   globale.PNC12=PNC12;
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+
+        switch (compoundButton.getId()) {
+
+
+            case R.id.rb_PNC4_yes: {
+                //do stuff
+                if (rb_PNC4_yes.isChecked()) {
+
+                    Lv_PNC5.setVisibility(View.VISIBLE);
+                    Lv_PNC5_1.setVisibility(View.VISIBLE);
+                    Lv_PNC5_2.setVisibility(View.VISIBLE);
+                    Lv_PNC5_3.setVisibility(View.VISIBLE);
+
+                }
+                break;
+
+            }
+
+
+            case R.id.rb_PNC4_no: {
+                //do stuff
+                if (rb_PNC4_no.isChecked()) {
+
+                    Lv_PNC5.setVisibility(View.GONE);
+                    Lv_PNC5_1.setVisibility(View.GONE);
+                    Lv_PNC5_2.setVisibility(View.GONE);
+                    Lv_PNC5_3.setVisibility(View.GONE);
+
+                    ClearAllcontrol.ClearAll(Lv_PNC5);
+                    ClearAllcontrol.ClearAll(Lv_PNC5_1);
+                    ClearAllcontrol.ClearAll(Lv_PNC5_2);
+                    ClearAllcontrol.ClearAll(Lv_PNC5_3);
+
+
+
+                }
+                break;
+
+            }
+
+
+        }
+
+    }
+
+    String s_remarks="";
+    public  void Insert_remarks()
+    {
+
+
+        final AlertDialog b = new AlertDialog.Builder(this).create();
+
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View v = layoutInflater.inflate(R.layout.dialog_remkarks, null);
+        b.setView(v);
+        b.setCancelable(false);
+
+
+
+        final EditText ed_remakrs=(EditText)v.findViewById(R.id.ed_remarks);
+        Button btnsave = (Button) v.findViewById(R.id.btn_save);
+
+
+
+        btnsave.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view)
             {
 
-                b.cancel();
+                if(ed_remakrs.getText().toString().length()>0)
+                {
+                    s_remarks=ed_remakrs.getText().toString().trim();
+
+
+
+                }
+
+
+                String query = "Update  " +
+                        "ttable set "+
+
+                        "remarks='"+s_remarks+"'"+
+                        " where id="+globale.db_pk;
+
+                query = String.format(query);
+
+
+                LocalDataManager Lm = new LocalDataManager(getApplicationContext());
+
+                database.execSQL(query);
+
+
+                finish();
 
             }
         });
@@ -463,22 +471,6 @@ public  class pnc extends AppCompatActivity implements View.OnClickListener {
         //show dialog
         b.show();
 
-    }
 
-    void next_step()
-    {
-               globale.PNC1= PNC1;
-               globale.PNC2= PNC2;
-               globale.PNC3= PNC3;
-               globale.PNC4= PNC4;
-               globale.PNC5= PNC5;
-               globale.PNC6= PNC6;
-               globale.PNC7= PNC7;
-               globale.PNC8= PNC8;
-               globale.PNC9= PNC9;
-               globale.PNC10=PNC10;
-               globale.PNC11=PNC11;
-               globale.PNC12=PNC12;
     }
-
 }

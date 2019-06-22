@@ -82,7 +82,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW/CHW explain to the participants/mothers about?"
+                        android:text="Did Lady health worker/Community health worker explain to the participants/mothers about?"
                         android:textSize="16sp"
                         android:textColor="@color/black_overlay"
                         />
@@ -113,7 +113,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW define the importance of immunization (vaccination)?"
+                        android:text="Did Lady health worker/Community health worker explain to participants/mothers about the importance of immunization (vaccination)?"
 
                         />
 
@@ -163,7 +163,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW define the schedule of immunization?"
+                        android:text="Did Lady health worker/Community health worker explain to participants/mothers about  the schedule of immunization?"
 
                         />
 
@@ -213,7 +213,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW explain about new vaccine against diarrhea (Rota virus)"
+                        android:text="Did Lady health worker/Community health worker explain to participants/mothers about  new vaccine against diarrhea (Rota virus)"
 
                         />
 
@@ -246,7 +246,6 @@
             </android.support.v7.widget.CardView>
             <!-- I3 Ends-->
 			
-			
 			<!-- I4 -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
 
@@ -264,7 +263,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW define the causes of 10 diseases "
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about BCG vaccine (against TB Tuberculosis disease)?"
 
                         />
 
@@ -296,404 +295,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- I4 Ends-->
-
-
-            <!-- Danger Sign title -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="VACCINATIONS"
-                        android:textStyle="bold"
-                        android:textColor="@color/black_overlay"
-                        />
-
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--Danger Sign  Ends-->
-
-
-
-
-            <!-- I5 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_I5"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="BCG vaccine (against TB disease Tuberculosis)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_I5_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_I5_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- I5 Ends-->
-			
-			<!-- I6 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_I6"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Polio vaccine (against polio disease)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_I6_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_I6_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- I6 Ends-->
-			
-			<!-- I7 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_I7"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Penta vaccine (against Diphtheria, pertussis, tetanus, HBV, Hib diseases)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_I7_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_I7_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- I7 Ends-->
-			
-			<!-- I8 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_I8"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="PCV-10 Pneumococcal vaccine (against pneumonia disease)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_I8_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_I8_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- I8 Ends-->
-			
-			<!-- I9 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_I9"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Measles vaccine  "
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_I9_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_I9_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- I9 Ends-->
-			
-			<!-- I10 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_I10"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Vitamin-A drop"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_I10_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_I10_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- I10 Ends-->
-			
-			<!-- I11 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_I11"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Rota virus vaccine (against diarrhea diseases)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_I11_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_I11_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- I11 Ends-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

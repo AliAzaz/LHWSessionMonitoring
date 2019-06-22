@@ -581,7 +581,7 @@ public  class preg_txt extends AppCompatActivity implements View.OnClickListener
             Lv_P13.setVisibility(View.GONE);
         }
 
-        if(globale.P14.equals("0"))
+      /*  if(globale.P14.equals("0"))
         {
             Lv_P14.setVisibility(View.GONE);
         }
@@ -645,7 +645,7 @@ public  class preg_txt extends AppCompatActivity implements View.OnClickListener
             Lv_P27.setVisibility(View.GONE);
         }
 
-
+*/
 
 
 

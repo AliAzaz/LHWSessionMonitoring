@@ -41,7 +41,7 @@ public class LocalDataManager {
 
         try {
 
-          String  query = "select * from ttable where Interview_status = '%s' order by id ASC";
+          String  query = "select id,Q1 from ttable where Interview_status = '%s' order by id ASC";
             query = String.format(query, status);
 
             database.beginTransaction();

@@ -91,7 +91,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW/CHW explain to the participants/mothers about?"
+                        android:text="Did Lady health worker/Community health worker explain to the participants/mothers about?"
                         android:textSize="16sp"
                         android:textColor="@color/black_overlay"
                         />

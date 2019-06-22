@@ -155,7 +155,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW explain the preventions from pneumonia to participants?"
+                        android:text="What home treatment LHW prescribe for Pneumonia?"
 
                         />
 
@@ -205,7 +205,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW explain the signs and symptoms of Pneumonia? "
+                        android:text="Did LHW explain to participants/mothers about the preventions from pneumonia?"
 
                         />
 
@@ -255,7 +255,10 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW explain that what step should be taken in case of emergency during Pneumonia?"
+                        android:text="Did LHW explain to participants/mothers about the signs of Pneumonia?
+Fast breathing
+Chest in drawing
+"
 
                         />
 
@@ -305,7 +308,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW explain about ARI timer?"
+                        android:text="Did LHW explain to participants/mothers about that what step should be taken in case of emergency during Pneumonia?"
 
                         />
 
@@ -355,7 +358,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW explain the treatment of Pneumonia?"
+                        android:text="Did LHW explain to participants/mothers about the treatment of Pneumonia?"
 
                         />
 
@@ -405,7 +408,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW explain about the amoxicillin DT dose "
+                        android:text="Did LHW explain to participants/mothers about the use amoxicillin DT/syrup dose?"
 
                         />
 
@@ -437,28 +440,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- P7 Ends-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

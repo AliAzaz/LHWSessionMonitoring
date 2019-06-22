@@ -78,7 +78,7 @@
                         android:textColor="@color/black_overlay"
                         />
 
-                    <TextView
+               <!--     <TextView
 
 
                         style="@style/TextView"
@@ -89,7 +89,7 @@
 
                         />
 
-
+ -->
 
 
 
@@ -117,7 +117,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About importance of antenatal care visits (at least 4 visits)?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers (especially pregnant women) about importance of antenatal care visits (at least 4 visits)?"
 
                         />
 
@@ -169,7 +169,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About skilled health personnel (Doctor, Nurse, Midwife and Lady Health Visitor) for antenatal check-ups?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about skilled health attendant (Doctor, Nurse, Midwife, Community Midwife and Lady Health Visitor) for antenatal check-ups?"
 
                         />
 
@@ -222,7 +222,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About schedule of ANC visits?"
+                        android:text="Did Lady health worker/Community health worker inform participants/mothers (especially pregnant women) about schedule of antenatal care visits?"
 
                         />
 
@@ -273,7 +273,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About regular blood pressure check-up?"
+                        android:text="Did Lady health worker/Community health worker counsel  participants/mothers about regular blood pressure (BP) check-up?"
 
                         />
 
@@ -324,7 +324,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About monthly weight check-up?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about monthly weight check-up?"
 
                         />
 
@@ -379,7 +379,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About Tetanus Toxoid (TT) vaccination during pregnancy which prevent from convulsions/fits?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about Tetanus Toxoid (TT) vaccination during pregnancy which prevent from convulsions/fits?"
 
                         />
 
@@ -431,7 +431,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About appropriate use of iron folic acid tablets?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about Urine dipstick and its use?"
 
                         />
 
@@ -484,7 +484,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About to take rest for one to two hours during day time?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about Ultrasound?"
 
                         />
 
@@ -535,7 +535,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About to take more available food (nutrition) than normal routine?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about appropriate use of iron folic acid tablets?"
 
                         />
 
@@ -586,7 +586,7 @@
 
 
                         style="@style/TextView"
-                        android:text="About personal hygiene during pregnancy?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about physical activity and  adequate nutrition more than normal routine?"
 
                         />
 
@@ -637,7 +637,7 @@
 
 
                         style="@style/TextView"
-                        android:text="In case of any complication/emergency during pregnancy visit nearest health facility for check-up?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about personal hygiene during pregnancy?"
 
                         />
 
@@ -670,7 +670,7 @@
             </android.support.v7.widget.CardView>
             <!-- P11 Ends-->
 
-            <!-- Danger Sign title -->
+            <!-- Danger Sign title
             <android.support.v7.widget.CardView style="@style/Q_CardView"
 
                 >
@@ -698,7 +698,7 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-            <!--Danger Sign  Ends-->
+         -->
 
 
             <!-- P12 -->
@@ -718,7 +718,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Difficulty in breathing"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about danger signs during pregnancy?"
 
                         />
 
@@ -752,6 +752,682 @@
             <!-- P12 Ends-->
 
 
+
+
+
+        <!-- P12_1 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_1"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Difficulty in breathing during pregnancy"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_1_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_1_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_1 Ends-->
+
+
+            <!-- P12_2 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_2"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="vaginal bleeding (APH) during pregnancy"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_2_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_2_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_2 Ends-->
+
+
+            <!-- P12_3 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_3"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Baby not moving (No fetus movement after four months of pregnancy) during pregnancy?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_3_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_3_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_3 Ends-->
+
+
+
+            <!-- P12_4 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_4"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="convulsions/fits during pregnancy "
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_4_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_4_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_4 Ends-->
+
+
+            <!-- P12_5 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_5"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Severe headache"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_5_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_5_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_5 Ends-->
+
+            <!-- P12_6 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_6"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Blurred vision "
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_6_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_6_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_6 Ends-->
+
+
+
+
+            <!-- P12_7 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_7"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="vomiting continues after 3 months of pregnancy"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_7_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_7_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_7 Ends-->
+
+
+
+
+            <!-- P12_8 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_8"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Foul smelling vaginal discharge"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_8_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_8_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_8 Ends-->
+
+
+            <!-- P12_9 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_9"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Lower abdominal pain"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_9_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_9_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_9 Ends-->
+
+
+
+
+            <!-- P12_10 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_10"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Swelling on face and arms (edema)"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_10_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_10_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_10 Ends-->
+
+
+
+            <!-- P12_11 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_11"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="high blood pressure (High BP)"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_11_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_11_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_11 Ends-->
+
+
+
+            <!-- P12_12 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_12"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="weakness (Pale skin)/Anemia"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_12_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_12_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_12 Ends-->
+
+
+
+
+            <!-- P12_13 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_P12_13"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="premature water breaking  less than 37 weeks "
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_P12_13_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_P12_13_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P12_13 Ends-->
+
+
             <!-- P13 -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
 
@@ -769,7 +1445,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Fatigue / Tiredness"
+                        android:text="Did Lady health worker/Community health worker inform about signs of malaria (feeling cold, fever) during pregnancy?"
 
                         />
 
@@ -803,730 +1479,8 @@
             <!-- P13 Ends-->
 
 
-            <!-- P14 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
 
-                >
 
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P14"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Vaginal bleeding (APH)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P14_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P14_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P14 Ends-->
-
-
-            <!-- P15 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P15"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Baby not moving (No fetus movement after four months of pregnancy)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P15_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P15_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P15 Ends-->
-
-
-
-            <!-- P16 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P16"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Loss of consciousness "
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P16_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P16_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P16 Ends-->
-
-
-            <!-- P17 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P17"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Convulsions/fits"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P17_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P17_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P17 Ends-->
-
-            <!-- P18 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P18"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Headache and blurred vision"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P18_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P18_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P18 Ends-->
-
-
-
-
-            <!-- P19 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P19"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Early labor pain before term"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P19_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P19_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P19 Ends-->
-
-
-
-
-            <!-- P20 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P20"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Foul smelling vaginal discharge"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P20_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P20_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P20 Ends-->
-
-
-            <!-- P21 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P21"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Signs of malaria (feeling cold, fever)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P21_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P21_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P21 Ends-->
-
-
-
-
-            <!-- P22 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P22"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Vomiting after 3 months of pregnancy"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P22_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P22_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P22 Ends-->
-
-
-
-            <!-- P23 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P23"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="High blood pressure"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P23_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P23_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P23 Ends-->
-
-
-
-            <!-- P24 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P24"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Swelling on face and arms"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P24_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P24_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P24 Ends-->
-
-
-
-
-            <!-- P25 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P25"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Weakness (Pale skin)/Anemia "
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P25_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P25_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P25 Ends-->
-
-
-
-            <!-- P26 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P26"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Premature water breaking less then 37th weeks"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P26_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P26_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P26 Ends-->
-
-
-
-            <!-- P27 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_P27"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Lower abdominal pain"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_P27_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_P27_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P27 Ends-->
 
 
 

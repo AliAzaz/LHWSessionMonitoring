@@ -33,13 +33,14 @@
                 android:icon="@drawable/syringe"
                 android:title="Immunization" />
             <item
-                android:id="@+id/stage_6"
-                android:icon="@drawable/labmicroscope"
-                android:title="Pneumonia " />
-            <item
                 android:id="@+id/stage_7"
                 android:icon="@drawable/sick"
                 android:title="Diarrhea" />
+            <item
+                android:id="@+id/stage_6"
+                android:icon="@drawable/labmicroscope"
+                android:title="Pneumonia " />
+
 
 
 

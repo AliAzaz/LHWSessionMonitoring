@@ -78,23 +78,9 @@
                         android:textStyle="bold"
                         android:textColor="@color/black_overlay"
                         />
-                    <TextView
 
 
-                        style="@style/TextView"
-                        android:text="NEWNATAL CARE "
-                        android:textStyle="bold"
-                        android:textColor="@color/black_overlay"
-                        />
 
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Did LHW/CHW explain to the participants/mothers about?"
-                        android:textSize="16sp"
-                        android:textColor="@color/black_overlay"
-                        />
 
 
 
@@ -120,7 +106,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Clean and dry newborn with clean cloth and use another cloth for wrapping"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about clean and dry with clean cloth and use another cloth for wrapping of newborn?"
 
                         />
 
@@ -170,7 +156,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Cut the cord with new blade"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about new blade to cut the cord of newborn?"
 
                         />
 
@@ -220,7 +206,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Choloroxidine gel?"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about Chlorhexidine gel to apply on the newborn cord after cutting?"
 
                         />
 
@@ -270,7 +256,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Use of choloroxidine gel?"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about use of Chlorhexidine gel?"
 
                         />
 
@@ -323,7 +309,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Clean eyes of newborn (eye care)"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about eye care?"
 
                         />
 
@@ -373,7 +359,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Clean nose and mouth with clean gauze/cloth for normal breathing"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about clean nose and mouth with clean gauze/cloth for normal breathing?"
 
                         />
 
@@ -423,7 +409,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Skin to skin contact keep newborn warm"
+                        android:text="Did Lady health worker/Community health worker fill newborn care checklist?"
 
                         />
 
@@ -473,7 +459,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Administer colostrum’s immediately after birth and avoid pre-lacteal feed"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about skin to skin contact to keep warm of newborn? warm"
 
                         />
 
@@ -523,7 +509,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Start breastfeeding within one hour after birth"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about administration of  colostrum’s immediately after birth and avoid pre-lacteal feed?"
 
                         />
 
@@ -573,7 +559,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Exclusive breastfeeding up to six months"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about start breastfeeding within one hour after birth?"
 
                         />
 
@@ -623,7 +609,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Methods of breastfeeding (Correct or Incorrect positions)"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about exclusive breastfeeding up to six months of age?"
 
                         />
 
@@ -673,7 +659,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Breastfeeding complications and their solutions"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about newborn’s complementary feeding after age of six months till age of 2 years?"
                         />
 
 
@@ -722,7 +708,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Importance of weighing newborns"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about methods of breastfeeding (Correct or Incorrect positions)?"
 
                         />
 
@@ -773,7 +759,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Give first bath to newborn after 24 hours"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about breastfeeding complications and their solutions?"
 
                         />
 
@@ -824,7 +810,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Schedule of neonate (newborn) check-ups "
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about importance of weighing newborns?"
 
                         />
 
@@ -861,35 +847,7 @@
 
 
 
-            <!-- Danger Sign title -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
 
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="DANGER SIGNS OF NEWBORN "
-                        android:textStyle="bold"
-                        android:textColor="@color/black_overlay"
-                        />
-
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--Danger Sign  Ends-->
 
 
 
@@ -911,7 +869,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Convulsions/spasms/rigidity"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about the care of low birth weight newborn?"
 
                         />
 
@@ -963,7 +921,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Movement only when stimulated or no movement, even when stimulated"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about  first bath to newborn after 6 hours?"
 
                         />
 
@@ -1014,7 +972,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Not feeding well"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about schedule of neonate (newborn) check-ups?"
 
                         />
 
@@ -1047,6 +1005,43 @@
             </android.support.v7.widget.CardView>
             <!-- N18 Ends-->
 
+            <!-- Danger Sign title -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="DANGER SIGNS OF NEWBORN "
+                        android:textStyle="bold"
+                        android:textColor="@color/black_overlay"
+                        />
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker explain to the participants/mothers about? "
+                        android:textStyle="italic"
+                        android:textSize="16sp"
+                        android:textColor="@color/black_overlay"
+                        />
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--Danger Sign  Ends-->
 
             <!-- N19 -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
@@ -1065,7 +1060,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Fever"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about danger signs of newborn?"
 
                         />
 
@@ -1099,7 +1094,7 @@
             <!-- N19 Ends-->
 
 
-            <!-- N20 -->
+            <!-- N20_1 -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
 
                 >
@@ -1109,14 +1104,14 @@
 
                     style="@style/Q_Linerlayout_v"
 
-                    android:id="@+id/Lv_N20"
+                    android:id="@+id/Lv_N20_1"
                     >
 
                     <TextView
 
 
                         style="@style/TextView"
-                        android:text="Difficult/fast breathing"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about convulsions/spasms/rigidity?"
 
                         />
 
@@ -1129,7 +1124,7 @@
 
                             style="@style/RadioButton"
                             android:text="@string/rb_yes"
-                            android:id="@+id/rb_N20_yes"
+                            android:id="@+id/rb_N20_1_yes"
                             />
 
                         <RadioButton
@@ -1137,7 +1132,7 @@
                             style="@style/RadioButton"
                             android:text="@string/rb_No"
 
-                            android:id="@+id/rb_N20_no"
+                            android:id="@+id/rb_N20_1_no"
                             />
 
                     </RadioGroup>
@@ -1147,7 +1142,311 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-            <!-- N20 Ends-->
+            <!-- N20_1 Ends-->
+
+
+
+            <!-- N20_2 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_N20_2"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about movement only when stimulated or no movement, even when stimulated?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_N20_2_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_N20_2_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- N20_2 Ends-->
+
+            <!-- N20_3 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_N20_3"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about not feeding well?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_N20_3_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_N20_3_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- N20_3 Ends-->
+
+
+
+            <!-- N20_4 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_N20_4"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about fever?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_N20_4_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_N20_4_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- N20_4 Ends-->
+
+            <!-- N20_5 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_N20_5"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about difficult/fast breathing?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_N20_5_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_N20_5_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- N20_5 Ends-->
+
+            <!-- N20_6 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_N20_6"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about lethargy/unconsciousness?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_N20_6_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_N20_6_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- N20_6 Ends-->
+
+            <!-- N20_7 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_N20_7"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about yellow fever?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_N20_7_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_N20_7_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- N20_7 Ends-->
 
 
             <!-- N21 -->
@@ -1167,7 +1466,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Lethargy/unconsciousness"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about care of low birth weight babies?"
 
                         />
 
@@ -1218,7 +1517,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Yellow or pale color on skin eyes"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about babies not  crying after birth?"
 
                         />
 
@@ -1252,105 +1551,7 @@
             <!-- N22 Ends-->
 
 
-            <!-- N23 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_N23"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Low birth weight"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_N23_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_N23_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- N23 Ends-->
-
-            <!-- N24 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_N24"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Not crying"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_N24_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_N24_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- N24 Ends-->
+         
 
 
 

@@ -1,5 +1,6 @@
 package com.irfansyed.umeedenau.umeedenauMonitring;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -23,13 +25,14 @@ import java.util.Date;
 
 import data.LocalDataManager;
 import data.col_A;
+import utils.ClearAllcontrol;
 import utils.GpsTracker;
 import utils.LocationHelper;
 
 import static data.LocalDataManager.database;
 
 
-public  class preg extends AppCompatActivity implements View.OnClickListener {
+public  class preg extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
 
 
 
@@ -53,21 +56,20 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
             Lv_P10,
             Lv_P11,
             Lv_P12,
-            Lv_P13,
-            Lv_P14,
-            Lv_P15,
-            Lv_P16,
-            Lv_P17,
-            Lv_P18,
-            Lv_P19,
-            Lv_P20,
-            Lv_P21,
-            Lv_P22,
-            Lv_P23,
-            Lv_P24,
-            Lv_P25,
-            Lv_P26,
-            Lv_P27;
+            Lv_P12_1,
+            Lv_P12_2,
+            Lv_P12_3,
+            Lv_P12_4,
+            Lv_P12_5,
+            Lv_P12_6,
+            Lv_P12_7,
+            Lv_P12_8,
+            Lv_P12_9,
+            Lv_P12_10,
+            Lv_P12_11,
+            Lv_P12_12,
+            Lv_P12_13,
+            Lv_P13;
     
     
     RadioButton
@@ -84,21 +86,20 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
     rb_P10_yes,
     rb_P11_yes,
     rb_P12_yes,
+    rb_P12_1_yes,
+    rb_P12_2_yes,
+    rb_P12_3_yes,
+    rb_P12_4_yes,
+    rb_P12_5_yes,
+    rb_P12_6_yes,
+    rb_P12_7_yes,
+    rb_P12_8_yes,
+    rb_P12_9_yes,
+    rb_P12_10_yes,
+    rb_P12_11_yes,
+    rb_P12_12_yes,
+    rb_P12_13_yes,
     rb_P13_yes,
-    rb_P14_yes,
-    rb_P15_yes,
-    rb_P16_yes,
-    rb_P17_yes,
-    rb_P18_yes,
-    rb_P19_yes,
-    rb_P20_yes,
-    rb_P21_yes,
-    rb_P22_yes,
-    rb_P23_yes,
-    rb_P24_yes,
-    rb_P25_yes,
-    rb_P26_yes,
-    rb_P27_yes,
     rb_P1_no,
     rb_P2_no,
     rb_P3_no,
@@ -111,21 +112,20 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
     rb_P10_no,
     rb_P11_no,
     rb_P12_no,
-    rb_P13_no,
-    rb_P14_no,
-    rb_P15_no,
-    rb_P16_no,
-    rb_P17_no,
-    rb_P18_no,
-    rb_P19_no,
-    rb_P20_no,
-    rb_P21_no,
-    rb_P22_no,
-    rb_P23_no,
-    rb_P24_no,
-    rb_P25_no,
-    rb_P26_no,
-    rb_P27_no;
+    rb_P12_1_no,
+    rb_P12_2_no,
+    rb_P12_3_no,
+    rb_P12_4_no,
+    rb_P12_5_no,
+    rb_P12_6_no,
+    rb_P12_7_no,
+    rb_P12_8_no,
+    rb_P12_9_no,
+    rb_P12_10_no,
+    rb_P12_11_no,
+    rb_P12_12_no,
+    rb_P12_13_no,
+    rb_P13_no;
 
 
 
@@ -144,21 +144,20 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
             P10,
             P11,
             P12,
-            P13,
-            P14,
-            P15,
-            P16,
-            P17,
-            P18,
-            P19,
-            P20,
-            P21,
-            P22,
-            P23,
-            P24,
-            P25,
-            P26,
-            P27;
+            P12_1,
+            P12_2,
+            P12_3,
+            P12_4,
+            P12_5,
+            P12_6,
+            P12_7,
+            P12_8,
+            P12_9,
+            P12_10,
+            P12_11,
+            P12_12,
+            P12_13,
+            P13;
 
 
     //endregion
@@ -183,6 +182,8 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         btn_next.setOnClickListener(this);
 
 
+        rb_P12_no.setOnCheckedChangeListener(this);
+        rb_P12_yes.setOnCheckedChangeListener(this);
 
 
 
@@ -207,10 +208,12 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
                 insertdata();
                 fun_next_step();
 
-                Intent intt=new Intent(this,finall.class);
-                intt.putExtra("put_extra",1);
-                startActivity(intt);
-                this.finish();
+
+
+                Insert_remarks();
+
+
+
 
 
             }
@@ -251,21 +254,21 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         Lv_P10=(LinearLayout) findViewById(R.id.Lv_P10);
         Lv_P11=(LinearLayout) findViewById(R.id.Lv_P11);
         Lv_P12=(LinearLayout) findViewById(R.id.Lv_P12);
+        Lv_P12_1=(LinearLayout) findViewById(R.id.Lv_P12_1);
+        Lv_P12_2=(LinearLayout) findViewById(R.id.Lv_P12_2);
+        Lv_P12_3=(LinearLayout) findViewById(R.id.Lv_P12_3);
+        Lv_P12_4=(LinearLayout) findViewById(R.id.Lv_P12_4);
+        Lv_P12_5=(LinearLayout) findViewById(R.id.Lv_P12_5);
+        Lv_P12_6=(LinearLayout) findViewById(R.id.Lv_P12_6);
+        Lv_P12_7=(LinearLayout) findViewById(R.id.Lv_P12_7);
+        Lv_P12_8=(LinearLayout) findViewById(R.id.Lv_P12_8);
+        Lv_P12_9=(LinearLayout) findViewById(R.id.Lv_P12_9);
+        Lv_P12_10=(LinearLayout) findViewById(R.id.Lv_P12_10);
+        Lv_P12_11=(LinearLayout) findViewById(R.id.Lv_P12_11);
+        Lv_P12_12=(LinearLayout) findViewById(R.id.Lv_P12_12);
+        Lv_P12_13=(LinearLayout) findViewById(R.id.Lv_P12_13);
         Lv_P13=(LinearLayout) findViewById(R.id.Lv_P13);
-        Lv_P14=(LinearLayout) findViewById(R.id.Lv_P14);
-        Lv_P15=(LinearLayout) findViewById(R.id.Lv_P15);
-        Lv_P16=(LinearLayout) findViewById(R.id.Lv_P16);
-        Lv_P17=(LinearLayout) findViewById(R.id.Lv_P17);
-        Lv_P18=(LinearLayout) findViewById(R.id.Lv_P18);
-        Lv_P19=(LinearLayout) findViewById(R.id.Lv_P19);
-        Lv_P20=(LinearLayout) findViewById(R.id.Lv_P20);
-        Lv_P21=(LinearLayout) findViewById(R.id.Lv_P21);
-        Lv_P22=(LinearLayout) findViewById(R.id.Lv_P22);
-        Lv_P23=(LinearLayout) findViewById(R.id.Lv_P23);
-        Lv_P24=(LinearLayout) findViewById(R.id.Lv_P24);
-        Lv_P25=(LinearLayout) findViewById(R.id.Lv_P25);
-        Lv_P26=(LinearLayout) findViewById(R.id.Lv_P26);
-        Lv_P27=(LinearLayout) findViewById(R.id.Lv_P27);
+
 
         rb_P1_yes=(RadioButton)findViewById(R.id.rb_P1_yes);
         rb_P2_yes=(RadioButton)findViewById(R.id.rb_P2_yes);
@@ -279,21 +282,21 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         rb_P10_yes=(RadioButton)findViewById(R.id.rb_P10_yes);
         rb_P11_yes=(RadioButton)findViewById(R.id.rb_P11_yes);
         rb_P12_yes=(RadioButton)findViewById(R.id.rb_P12_yes);
+        rb_P12_1_yes=(RadioButton)findViewById(R.id.rb_P12_1_yes);
+        rb_P12_2_yes=(RadioButton)findViewById(R.id.rb_P12_2_yes);
+        rb_P12_3_yes=(RadioButton)findViewById(R.id.rb_P12_3_yes);
+        rb_P12_4_yes=(RadioButton)findViewById(R.id.rb_P12_4_yes);
+        rb_P12_5_yes=(RadioButton)findViewById(R.id.rb_P12_5_yes);
+        rb_P12_6_yes=(RadioButton)findViewById(R.id.rb_P12_6_yes);
+        rb_P12_7_yes=(RadioButton)findViewById(R.id.rb_P12_7_yes);
+        rb_P12_8_yes=(RadioButton)findViewById(R.id.rb_P12_8_yes);
+        rb_P12_9_yes=(RadioButton)findViewById(R.id.rb_P12_9_yes);
+        rb_P12_10_yes=(RadioButton)findViewById(R.id.rb_P12_10_yes);
+        rb_P12_11_yes=(RadioButton)findViewById(R.id.rb_P12_11_yes);
+        rb_P12_12_yes=(RadioButton)findViewById(R.id.rb_P12_12_yes);
+        rb_P12_13_yes=(RadioButton)findViewById(R.id.rb_P12_13_yes);
         rb_P13_yes=(RadioButton)findViewById(R.id.rb_P13_yes);
-        rb_P14_yes=(RadioButton)findViewById(R.id.rb_P14_yes);
-        rb_P15_yes=(RadioButton)findViewById(R.id.rb_P15_yes);
-        rb_P16_yes=(RadioButton)findViewById(R.id.rb_P16_yes);
-        rb_P17_yes=(RadioButton)findViewById(R.id.rb_P17_yes);
-        rb_P18_yes=(RadioButton)findViewById(R.id.rb_P18_yes);
-        rb_P19_yes=(RadioButton)findViewById(R.id.rb_P19_yes);
-        rb_P20_yes=(RadioButton)findViewById(R.id.rb_P20_yes);
-        rb_P21_yes=(RadioButton)findViewById(R.id.rb_P21_yes);
-        rb_P22_yes=(RadioButton)findViewById(R.id.rb_P22_yes);
-        rb_P23_yes=(RadioButton)findViewById(R.id.rb_P23_yes);
-        rb_P24_yes=(RadioButton)findViewById(R.id.rb_P24_yes);
-        rb_P25_yes=(RadioButton)findViewById(R.id.rb_P25_yes);
-        rb_P26_yes=(RadioButton)findViewById(R.id.rb_P26_yes);
-        rb_P27_yes=(RadioButton)findViewById(R.id.rb_P27_yes);
+
         rb_P1_no=(RadioButton)findViewById(R.id.rb_P1_no);
         rb_P2_no=(RadioButton)findViewById(R.id.rb_P2_no);
         rb_P3_no=(RadioButton)findViewById(R.id.rb_P3_no);
@@ -306,21 +309,21 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         rb_P10_no=(RadioButton)findViewById(R.id.rb_P10_no);
         rb_P11_no=(RadioButton)findViewById(R.id.rb_P11_no);
         rb_P12_no=(RadioButton)findViewById(R.id.rb_P12_no);
+        rb_P12_1_no=(RadioButton)findViewById(R.id.rb_P12_1_no);
+        rb_P12_2_no=(RadioButton)findViewById(R.id.rb_P12_2_no);
+        rb_P12_3_no=(RadioButton)findViewById(R.id.rb_P12_3_no);
+        rb_P12_4_no=(RadioButton)findViewById(R.id.rb_P12_4_no);
+        rb_P12_5_no=(RadioButton)findViewById(R.id.rb_P12_5_no);
+        rb_P12_6_no=(RadioButton)findViewById(R.id.rb_P12_6_no);
+        rb_P12_7_no=(RadioButton)findViewById(R.id.rb_P12_7_no);
+        rb_P12_8_no=(RadioButton)findViewById(R.id.rb_P12_8_no);
+        rb_P12_9_no=(RadioButton)findViewById(R.id.rb_P12_9_no);
+        rb_P12_10_no=(RadioButton)findViewById(R.id.rb_P12_10_no);
+        rb_P12_11_no=(RadioButton)findViewById(R.id.rb_P12_11_no);
+        rb_P12_12_no=(RadioButton)findViewById(R.id.rb_P12_12_no);
+        rb_P12_13_no=(RadioButton)findViewById(R.id.rb_P12_13_no);
         rb_P13_no=(RadioButton)findViewById(R.id.rb_P13_no);
-        rb_P14_no=(RadioButton)findViewById(R.id.rb_P14_no);
-        rb_P15_no=(RadioButton)findViewById(R.id.rb_P15_no);
-        rb_P16_no=(RadioButton)findViewById(R.id.rb_P16_no);
-        rb_P17_no=(RadioButton)findViewById(R.id.rb_P17_no);
-        rb_P18_no=(RadioButton)findViewById(R.id.rb_P18_no);
-        rb_P19_no=(RadioButton)findViewById(R.id.rb_P19_no);
-        rb_P20_no=(RadioButton)findViewById(R.id.rb_P20_no);
-        rb_P21_no=(RadioButton)findViewById(R.id.rb_P21_no);
-        rb_P22_no=(RadioButton)findViewById(R.id.rb_P22_no);
-        rb_P23_no=(RadioButton)findViewById(R.id.rb_P23_no);
-        rb_P24_no=(RadioButton)findViewById(R.id.rb_P24_no);
-        rb_P25_no=(RadioButton)findViewById(R.id.rb_P25_no);
-        rb_P26_no=(RadioButton)findViewById(R.id.rb_P26_no);
-        rb_P27_no=(RadioButton)findViewById(R.id.rb_P27_no);
+
 
         btn_next=(Button)findViewById(R.id.btn_preg_next);
 
@@ -381,71 +384,68 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         {
             return  false;
         }
+        if( fun_avioid_empty_text(Lv_P12_1)==false)
+        {
+            return  false;
+        }
+
+        if( fun_avioid_empty_text(Lv_P12_2)==false)
+        {
+            return  false;
+        }
+
+        if( fun_avioid_empty_text(Lv_P12_3)==false)
+        {
+            return  false;
+        }
+
+        if( fun_avioid_empty_text(Lv_P12_4)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_5)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_6)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_7)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_8)==false)
+        {
+            return  false;
+        }
+
+        if( fun_avioid_empty_text(Lv_P12_9)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_10)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_11)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_12)==false)
+        {
+            return  false;
+        }
+        if( fun_avioid_empty_text(Lv_P12_13)==false)
+        {
+            return  false;
+        }
         if( fun_avioid_empty_text(Lv_P13)==false)
         {
             return  false;
         }
 
-        if( fun_avioid_empty_text(Lv_P14)==false)
-        {
-            return  false;
-        }
 
-        if( fun_avioid_empty_text(Lv_P15)==false)
-        {
-            return  false;
-        }
-
-        if( fun_avioid_empty_text(Lv_P16)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P17)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P18)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P19)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P20)==false)
-        {
-            return  false;
-        }
-
-        if( fun_avioid_empty_text(Lv_P21)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P22)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P23)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P24)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P25)==false)
-        {
-            return  false;
-        }
-        if( fun_avioid_empty_text(Lv_P26)==false)
-        {
-            return  false;
-        }
-
-        if( fun_avioid_empty_text(Lv_P27)==false)
-        {
-            return  false;
-        }
 
 
         return  true;
@@ -486,21 +486,21 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         P10="0";
         P11="0";
         P12="0";
+        P12_1="0";
+        P12_2="0";
+        P12_3="0";
+        P12_4="0";
+        P12_5="0";
+        P12_6="0";
+        P12_7="0";
+        P12_8="0";
+        P12_9="0";
+        P12_10="0";
+        P12_11="0";
+        P12_12="0";
+        P12_13="0";
         P13="0";
-        P14="0";
-        P15="0";
-        P16="0";
-        P17="0";
-        P18="0";
-        P19="0";
-        P20="0";
-        P21="0";
-        P22="0";
-        P23="0";
-        P24="0";
-        P25="0";
-        P26="0";
-        P27="0";
+
 
 
         if(rb_P1_yes.isChecked())
@@ -552,77 +552,74 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         {
             P12="1";
         }
+        if(rb_P12_1_yes.isChecked())
+        {
+            P1="1";
+        }
+
+        if(rb_P12_1_yes.isChecked())
+        {
+            P1="1";
+        }
+
+        if(rb_P12_2_yes.isChecked())
+        {
+            P12_2="1";
+        }
+        if(rb_P12_3_yes.isChecked())
+        {
+            P12_3="1";
+        }
+
+        if(rb_P12_4_yes.isChecked())
+        {
+            P1="1";
+        }
+        if(rb_P12_4_yes.isChecked())
+        {
+            P1="1";
+        }
+        if(rb_P12_5_yes.isChecked())
+        {
+            P12_5="1";
+        }
+        if(rb_P12_6_yes.isChecked())
+        {
+            P12_6="1";
+        }
+        if(rb_P12_7_yes.isChecked())
+        {
+            P12_7="1";
+        }
+        if(rb_P12_8_yes.isChecked())
+        {
+            P12_8="1";
+        }
+        if(rb_P12_9_yes.isChecked())
+        {
+            P12_9="1";
+        }
+        if(rb_P12_10_yes.isChecked())
+        {
+            P12_10="1";
+        }
+        if(rb_P12_11_yes.isChecked())
+        {
+            P12_11="1";
+        }
+        if(rb_P12_12_yes.isChecked())
+        {
+            P12_12="1";
+        }
+        if(rb_P12_13_yes.isChecked())
+        {
+            P12_13="1";
+        }
         if(rb_P13_yes.isChecked())
         {
-            P1="1";
+            P13="1";
         }
 
-        if(rb_P13_yes.isChecked())
-        {
-            P1="1";
-        }
-
-        if(rb_P14_yes.isChecked())
-        {
-            P14="1";
-        }
-        if(rb_P15_yes.isChecked())
-        {
-            P15="1";
-        }
-
-        if(rb_P16_yes.isChecked())
-        {
-            P1="1";
-        }
-        if(rb_P16_yes.isChecked())
-        {
-            P1="1";
-        }
-        if(rb_P17_yes.isChecked())
-        {
-            P17="1";
-        }
-        if(rb_P18_yes.isChecked())
-        {
-            P18="1";
-        }
-        if(rb_P19_yes.isChecked())
-        {
-            P19="1";
-        }
-        if(rb_P20_yes.isChecked())
-        {
-            P20="1";
-        }
-        if(rb_P21_yes.isChecked())
-        {
-            P21="1";
-        }
-        if(rb_P22_yes.isChecked())
-        {
-            P22="1";
-        }
-        if(rb_P23_yes.isChecked())
-        {
-            P23="1";
-        }
-        if(rb_P24_yes.isChecked())
-        {
-            P24="1";
-        }
-        if(rb_P25_yes.isChecked())
-        {
-            P25="1";
-        }
-        if(rb_P26_yes.isChecked())
-        {
-            P26="1";
-        }
-        if(rb_P27_yes.isChecked())
-        {
-            P27="1";
-        }
 
 
 
@@ -661,21 +658,21 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
         "P10='"+P10+"',"+
         "P11='"+P11+"',"+
         "P12='"+P12+"',"+
-        "P13='"+P13+"',"+
-        "P14='"+P14+"',"+
-        "P15='"+P15+"',"+
-        "P16='"+P16+"',"+
-        "P17='"+P17+"',"+
-        "P18='"+P18+"',"+
-        "P19='"+P19+"',"+
-        "P20='"+P20+"',"+
-        "P21='"+P21+"',"+
-        "P22='"+P22+"',"+
-        "P23='"+P23+"',"+
-        "P24='"+P24+"',"+
-        "P25='"+P25+"',"+
-        "P26='"+P26+"',"+
-        "P27='"+P27+"'"+
+        "P12_1='"+P12_1+"',"+
+        "P12_2='"+P12_2+"',"+
+        "P12_3='"+P12_3+"',"+
+        "P12_4='"+P12_4+"',"+
+        "P12_5='"+P12_5+"',"+
+        "P12_6='"+P12_6+"',"+
+        "P12_7='"+P12_7+"',"+
+        "P12_8='"+P12_8+"',"+
+        "P12_9='"+P12_9+"',"+
+        "P12_10='"+P12_10+"',"+
+        "P12_11='"+P12_11+"',"+
+        "P12_12='"+P12_12+"',"+
+        "P12_13='"+P12_13+"',"+
+        "P13='"+P13+"'"+
+
 
                 " where id="+globale.db_pk;
 
@@ -740,6 +737,68 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
     }
 
 
+
+    String s_remarks="";
+    public  void Insert_remarks()
+    {
+
+
+        final AlertDialog b = new AlertDialog.Builder(this).create();
+
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View v = layoutInflater.inflate(R.layout.dialog_remkarks, null);
+        b.setView(v);
+        b.setCancelable(false);
+
+
+
+        final EditText ed_remakrs=(EditText)v.findViewById(R.id.ed_remarks);
+        Button btnsave = (Button) v.findViewById(R.id.btn_save);
+
+
+
+        btnsave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+
+                if(ed_remakrs.getText().toString().length()>0)
+                {
+                    s_remarks=ed_remakrs.getText().toString().trim();
+
+
+
+                }
+
+
+                String query = "Update  " +
+                        "ttable set "+
+
+                        "remarks='"+s_remarks+"'"+
+                        " where id="+globale.db_pk;
+
+                query = String.format(query);
+
+
+                LocalDataManager Lm = new LocalDataManager(getApplicationContext());
+
+                database.execSQL(query);
+
+
+                finish();
+
+            }
+        });
+
+
+
+
+        //show dialog
+        b.show();
+
+
+    }
+
     public void  fun_next_step()
     {
 
@@ -755,23 +814,106 @@ public  class preg extends AppCompatActivity implements View.OnClickListener {
                 globale.P10=P10;
                 globale.P11=P11;
                 globale.P12=P12;
+                globale.P12_1=P12_1;
+                globale.P12_2=P12_2;
+                globale.P12_3=P12_3;
+                globale.P12_4=P12_4;
+                globale.P12_5=P12_5;
+                globale.P12_6=P12_6;
+                globale.P12_7=P12_7;
+                globale.P12_8=P12_8;
+                globale.P12_9=P12_9;
+                globale.P12_10=P12_10;
+                globale.P12_11=P12_11;
+                globale.P12_12=P12_12;
+                globale.P12_13=P12_13;
                 globale.P13=P13;
-                globale.P14=P14;
-                globale.P15=P15;
-                globale.P16=P16;
-                globale.P17=P17;
-                globale.P18=P18;
-                globale.P19=P19;
-                globale.P20=P20;
-                globale.P21=P21;
-                globale.P22=P22;
-                globale.P23=P23;
-                globale.P24=P24;
-                globale.P25=P25;
-                globale.P26=P26;
-                globale.P27=P27;
+
 
     }
 
 
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+        switch (compoundButton.getId()) {
+
+
+            case R.id.rb_P12_yes: {
+                //do stuff
+                if (rb_P12_yes.isChecked()) {
+
+
+                    Lv_P12_1.setVisibility(View.VISIBLE);
+                    Lv_P12_2.setVisibility(View.VISIBLE);
+                    Lv_P12_3.setVisibility(View.VISIBLE);
+                    Lv_P12_4.setVisibility(View.VISIBLE);
+                    Lv_P12_5.setVisibility(View.VISIBLE);
+                    Lv_P12_6.setVisibility(View.VISIBLE);
+                    Lv_P12_7.setVisibility(View.VISIBLE);
+                    Lv_P12_8.setVisibility(View.VISIBLE);
+                    Lv_P12_9.setVisibility(View.VISIBLE);
+                    Lv_P12_10.setVisibility(View.VISIBLE);
+                    Lv_P12_11.setVisibility(View.VISIBLE);
+                    Lv_P12_12.setVisibility(View.VISIBLE);
+                    Lv_P12_13.setVisibility(View.VISIBLE);
+                }
+                break;
+
+                }
+
+
+            case R.id.rb_P12_no: {
+                //do stuff
+                if (rb_P12_no.isChecked()) {
+
+
+                    Lv_P12_1.setVisibility(View.GONE);
+                    Lv_P12_2.setVisibility(View.GONE);
+                    Lv_P12_3.setVisibility(View.GONE);
+                    Lv_P12_4.setVisibility(View.GONE);
+                    Lv_P12_5.setVisibility(View.GONE);
+                    Lv_P12_6.setVisibility(View.GONE);
+                    Lv_P12_7.setVisibility(View.GONE);
+                    Lv_P12_8.setVisibility(View.GONE);
+                    Lv_P12_9.setVisibility(View.GONE);
+                    Lv_P12_10.setVisibility(View.GONE);
+                    Lv_P12_11.setVisibility(View.GONE);
+                    Lv_P12_12.setVisibility(View.GONE);
+                    Lv_P12_13.setVisibility(View.GONE);
+
+
+
+
+                    ClearAllcontrol.ClearAll(Lv_P12_1);
+                    ClearAllcontrol.ClearAll(        Lv_P12_2);
+                    ClearAllcontrol.ClearAll(Lv_P12_3);
+                    ClearAllcontrol.ClearAll(        Lv_P12_4);
+                    ClearAllcontrol.ClearAll(Lv_P12_5);
+                    ClearAllcontrol.ClearAll(        Lv_P12_6);
+                    ClearAllcontrol.ClearAll(Lv_P12_7);
+                    ClearAllcontrol.ClearAll(        Lv_P12_8);
+                    ClearAllcontrol.ClearAll(Lv_P12_9);
+
+                    ClearAllcontrol.ClearAll(Lv_P12_10);
+                    ClearAllcontrol.ClearAll(        Lv_P12_11);
+                    ClearAllcontrol.ClearAll(Lv_P12_12);
+                    ClearAllcontrol.ClearAll(        Lv_P12_13);
+
+
+
+
+
+
+
+
+                }
+                break;
+
+            }
+
+
+        }
+
+    }
 }

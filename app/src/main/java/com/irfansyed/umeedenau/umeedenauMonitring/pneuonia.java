@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -98,10 +99,11 @@ public class pneuonia extends AppCompatActivity implements View.OnClickListener 
                 this.fun_asignment();
                 insertdata();
 
-                Intent itt=new Intent(this,finall.class);
-                itt.putExtra("put_extra",7);
-                startActivity(itt);
-                this.finish();
+              //  Intent itt=new Intent(this,finall.class);
+              //  itt.putExtra("put_extra",7);
+              //  startActivity(itt);
+
+                Insert_remarks();
 
 
 
@@ -243,7 +245,7 @@ public class pneuonia extends AppCompatActivity implements View.OnClickListener 
                 "PN4='" + PN4 + "'," +
                 "PN5='" + PN5 + "'," +
                 "PN6='" + PN6 + "'," +
-                "PN7='" + PN7 + "'," +
+                "PN7='" + PN7 + "'" +
 
 
                 " where id=" + globale.db_pk;
@@ -310,5 +312,69 @@ public class pneuonia extends AppCompatActivity implements View.OnClickListener 
         globale.PN6 = PN6;
         globale.PN7 = PN7;
     }
+
+
+
+    String s_remarks="";
+    public  void Insert_remarks()
+    {
+
+
+        final AlertDialog b = new AlertDialog.Builder(this).create();
+
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View v = layoutInflater.inflate(R.layout.dialog_remkarks, null);
+        b.setView(v);
+        b.setCancelable(false);
+
+
+
+        final EditText ed_remakrs=(EditText)v.findViewById(R.id.ed_remarks);
+        Button btnsave = (Button) v.findViewById(R.id.btn_save);
+
+
+
+        btnsave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+
+                if(ed_remakrs.getText().toString().length()>0)
+                {
+                    s_remarks=ed_remakrs.getText().toString().trim();
+
+
+
+                }
+
+
+                String query = "Update  " +
+                        "ttable set "+
+
+                        "remarks='"+s_remarks+"'"+
+                        " where id="+globale.db_pk;
+
+                query = String.format(query);
+
+
+                LocalDataManager Lm = new LocalDataManager(getApplicationContext());
+
+                database.execSQL(query);
+
+
+                finish();
+
+            }
+        });
+
+
+
+
+        //show dialog
+        b.show();
+
+
+    }
+
 
 }

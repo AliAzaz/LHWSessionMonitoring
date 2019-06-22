@@ -13,6 +13,8 @@ public class MyPreferences {
 
     final public static String FILE_NAME = "com.irfansyed.umeedenau";
     final public static String  USER_ID  = "userId";
+
+    final public static String  lhwIDS  = "lhwIDS";
     final public static String  USER_NAME  = "username";
     final public static String  NAME  = "name";
     final public static String  Pass_word  = "password";
@@ -38,6 +40,10 @@ public class MyPreferences {
         editor.putString(REQ1, url);
         editor.apply();
     }
+
+
+
+
 
     public String getReq1() {
         String url = sharedPreferences.getString(REQ1, null);
@@ -96,8 +102,10 @@ public class MyPreferences {
         editor.apply();
     }
 
-    public void setDistrict(String username) {
-        editor.putString(District, username);
+
+
+    public void setLHWIDS(String arry_lhw_ids) {
+        editor.putString(lhwIDS, arry_lhw_ids);
         editor.apply();
     }
 
@@ -117,8 +125,8 @@ public class MyPreferences {
         return username;
     }
 
-    public String getDistict() {
-        String username = sharedPreferences.getString(District, null);
+    public String getLhwIds() {
+        String username = sharedPreferences.getString(lhwIDS, null);
         return username;
     }
 
@@ -128,7 +136,7 @@ public class MyPreferences {
         return name;
     }
     public String getPassword() {
-        String passwrod = sharedPreferences.getString(USER_NAME, null);
+        String passwrod = sharedPreferences.getString(Pass_word, null);
         return passwrod;
     }
 

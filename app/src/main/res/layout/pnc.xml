@@ -78,7 +78,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Did LHW/CHW explain to the participants/mothers about?"
+                        android:text="Did Lady health worker/Community health worker explain to the participants/mothers about?"
                         android:textSize="16sp"
 
                         android:textColor="@color/black_overlay"
@@ -113,7 +113,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Immediate care of mother after delivery?"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about immediate care of mother after delivery?"
 
                         />
 
@@ -163,7 +163,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Postnatal care schedule of Mother and newborn after delivery? "
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mothers about postnatal care of mother and newborn within 24 hours after delivery?  "
 
                         />
 
@@ -214,7 +214,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Nutrition of delivered and pre lactating mothers"
+                        android:text="Did Lady health worker/Community health worker counsel to participants/mother about adequate nutrition of delivered and pre lactating mothers?"
 
                         />
 
@@ -268,7 +268,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Severe vaginal bleeding (Post-partum Hemorrhage)?"
+                        android:text="Did Lady health worker/Community health worker inform  participants/mothers about the danger signs after delivery?"
 
                         />
 
@@ -300,7 +300,7 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- P4 Ends-->
-            <!-- Danger Sign title -->
+            <!-- Danger Sign
             <android.support.v7.widget.CardView style="@style/Q_CardView"
 
                 >
@@ -328,7 +328,7 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-            <!--Danger Sign  Ends-->
+              Ends-->
 			<!-- P5 -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
 
@@ -346,7 +346,7 @@
 
 
                         style="@style/TextView"
-                        android:text="High Fever, lower abdominal pain or foul smelling discharge (infection)"
+                        android:text="Did Lady health worker/Community health worker inform  participants/mothers about high fever, lower abdominal pain or foul smelling discharge (infection) after delivery?"
 
                         />
 
@@ -378,7 +378,160 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- P5 Ends-->
-			
+
+
+            <!-- P5_1 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_PNC5_1"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform  participants/mothers about severe headache, blurred vision, high blood pressure after delivery?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_PNC5_1_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_PNC5_1_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P5_1 Ends-->
+
+            <!-- P5_2 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_PNC5_2"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform  participants/mothers about urinary or fecal incontinence (obstetric fistula) after delivery?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_PNC5_2_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_PNC5_2_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P5_2 Ends-->
+
+            <!-- P5_3 -->
+            <android.support.v7.widget.CardView style="@style/Q_CardView"
+
+                >
+
+
+                <LinearLayout
+
+                    style="@style/Q_Linerlayout_v"
+
+                    android:id="@+id/Lv_PNC5_3"
+                    >
+
+                    <TextView
+
+
+                        style="@style/TextView"
+                        android:text="Did Lady health worker/Community health worker inform  participants/mothers about extreme tiredness, Anemia after delivery?"
+
+                        />
+
+
+                    <RadioGroup style="@style/RadioGroup"
+
+                        >
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_yes"
+                            android:id="@+id/rb_PNC5_3_yes"
+                            />
+
+                        <RadioButton
+
+                            style="@style/RadioButton"
+                            android:text="@string/rb_No"
+
+                            android:id="@+id/rb_PNC5_3_no"
+                            />
+
+                    </RadioGroup>
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- P5_3 Ends-->
+            
+            
+            
 			<!-- P6 -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
 
@@ -396,7 +549,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Severe headache, blurred vision, high blood pressure"
+                        android:text="Did Lady health worker/Community health worker inform to participants/mothers about anxiety or depression (puerperal psychosis) after delivery?"
 
                         />
 
@@ -446,7 +599,7 @@
 
 
                         style="@style/TextView"
-                        android:text="Convulsions or fits (eclampsia)"
+                        android:text="Did Lady health worker/Community health worker inform  participants/mothers about breast problems (engorgement, sore, cracked bleeding or inverted nipples) after delivery?"
 
                         />
 
@@ -479,270 +632,8 @@
             </android.support.v7.widget.CardView>
             <!-- P7 Ends-->
 			
-			<!-- P8 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_PNC8"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Heavy vaginal bleeding (PPH)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_PNC8_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_PNC8_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P8 Ends-->
-			
-			<!-- P9 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_PNC9"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Urinary or fecal incontinence (obstetric fistula)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_PNC9_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_PNC9_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P9 Ends-->
-			
-			<!-- P10 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_PNC10"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Extreme tiredness, Anemia"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_PNC10_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_PNC10_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P10 Ends-->
-			
-			<!-- P11 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_PNC11"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Anxiety or depression (puerperal psychosis)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_PNC11_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_PNC11_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P11 Ends-->
-			
-			<!-- P12 -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                >
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    android:id="@+id/Lv_PNC12"
-                    >
-
-                    <TextView
-
-
-                        style="@style/TextView"
-                        android:text="Breast problems (engorgement, sore, cracked bleeding or inverted nipples)"
-
-                        />
-
-
-                    <RadioGroup style="@style/RadioGroup"
-
-                        >
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_yes"
-                            android:id="@+id/rb_PNC12_yes"
-                            />
-
-                        <RadioButton
-
-                            style="@style/RadioButton"
-                            android:text="@string/rb_No"
-
-                            android:id="@+id/rb_PNC12_no"
-                            />
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- P12 Ends-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
+            
             <!-- Button Next Starts-->
             <android.support.v7.widget.CardView
                 style="@style/Q_CardView"

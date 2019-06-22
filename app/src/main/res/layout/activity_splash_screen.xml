@@ -42,7 +42,7 @@ android:background="#EEEEEE"
         android:layout_width="260dp"
         android:layout_height="260dp"
         android:id="@+id/imageView2"
-        android:src="@drawable/uncolor"
+        android:src="@drawable/ulog"
 
 
       android:layout_centerHorizontal="true"

@@ -20,7 +20,7 @@
                    <ImageView
                        android:layout_width="165dp"
                        android:layout_height="140dp"
-                       android:src="@drawable/pdra"
+                       android:src="@drawable/unwhite"
                        android:layout_centerHorizontal="true"
                        android:layout_alignParentBottom="true"
                        android:layout_marginBottom="0dp"
@@ -101,7 +101,7 @@
 <TextView
   style="@style/TextView"
 
-  android:text="forgotten password? contact main office"
+  android:text="APP | 11.23"
   android:layout_width="wrap_content"
 
   android:textColor="@color/hitnscolor"

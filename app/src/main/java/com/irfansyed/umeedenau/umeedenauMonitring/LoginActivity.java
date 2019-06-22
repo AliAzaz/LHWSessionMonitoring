@@ -54,17 +54,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
                     Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                else if(preferences.getUserId()==-1) {
+               else if(preferences.getUserId()==-1) {
 
 
-                    new LoginAsync(LoginActivity.this, textUsername.getText().toString().trim(),
-                            textPassword.getText().toString().trim()).execute();
+                  new LoginAsync(LoginActivity.this, textUsername.getText().toString().trim(),
+                           textPassword.getText().toString().trim()).execute();
                 }
                 else
                 {
-                    if(textUsername.getText().toString().trim().equals(preferences.getUsername())) {
+                   if(textUsername.getText().toString().trim().equals(preferences.getUsername())) {
 
-                        if(textPassword.getText().toString().trim().equals(preferences.getPassword())) {
+                       if(textPassword.getText().toString().trim().equals(preferences.getPassword())) {
+
+              //       if(textUsername.getText().toString().trim().equals("pretesting")) {
+
+               //       if(textPassword.getText().toString().trim().equals("pretesting")) {
 
                     // call andother activity
 
@@ -189,19 +193,19 @@ class LoginAsync extends AsyncTask {
 
                 // for login id and data collectore Name irfan
 
-             //   Toast.makeText(mContext, resp, Toast.LENGTH_SHORT).show();
-                String[] resp_arry=resp.split(",");
+                //   Toast.makeText(mContext, resp, Toast.LENGTH_SHORT).show();
+                String[] resp_arry=resp.split("/");
                 String userid=resp_arry[0];
 
-                String name=resp_arry[1];
-                String District=resp_arry[2];
+
 
                 prefs.setUserId(Integer.parseInt(userid));
 
                 prefs.setUsername(mUsername);
                 prefs.setPassword(mPassword);
-                prefs.setName(name);
-                prefs.setDistrict(District);
+                prefs.setName(mUsername);
+                prefs.setUserId(Integer.parseInt(userid));
+                prefs.setLHWIDS(resp);
 
                 // redirect to another activity from here..
                 Intent intent = new Intent(mContext, HomeActivity.class);

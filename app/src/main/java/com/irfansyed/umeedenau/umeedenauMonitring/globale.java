@@ -65,20 +65,20 @@ public class globale {
     public static String P11 = "0";
     public static String P12 = "0";
     public static String P13 = "0";
-    public static String P14 = "0";
-    public static String P15 = "0";
-    public static String P16 = "0";
-    public static String P17 = "0";
-    public static String P18 = "0";
-    public static String P19 = "0";
-    public static String P20 = "0";
-    public static String P21 = "0";
-    public static String P22 = "0";
-    public static String P23 = "0";
-    public static String P24 = "0";
-    public static String P25 = "0";
-    public static String P26 = "0";
-    public static String P27 = "0";
+    public static String P12_1 = "0";
+    public static String P12_2 = "0";
+    public static String P12_3 = "0";
+    public static String P12_4 = "0";
+    public static String P12_5 = "0";
+    public static String P12_6 = "0";
+    public static String P12_7 = "0";
+    public static String P12_8 = "0";
+    public static String P12_9 = "0";
+    public static String P12_10 = "0";
+    public static String P12_11 = "0";
+    public static String P12_12 = "0";
+    public static String P12_13 = "0";
+
 
     public static String PNC1 = "0";
     public static String PNC2 = "0";

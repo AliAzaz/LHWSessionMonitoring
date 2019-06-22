@@ -88,9 +88,9 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
           Lv_Q6_1,
     Lv_Q7,
     Lv_Q8,
-    Lv_Q9,
-    Lv_Q10,
-          Lv_Q10_1,
+   // Lv_Q9,
+   // Lv_Q10,
+      //    Lv_Q10_1,
     Lv_Q11;
 
   Spinner sp_Q1;
@@ -113,14 +113,14 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
           rb_Q7_yes,
           rb_Q7_no,
           rb_Q8_yes,
-          rb_Q8_no,
-          rb_Q9_yes,
+          rb_Q8_no;
+         /* rb_Q9_yes,
           rb_Q9_no,
           rb_Q10_yes,
           rb_Q10_no,
 
     rb_Q10_1_yes,
-    rb_Q10_1_no;
+    rb_Q10_1_no; */
 
   String
 
@@ -134,11 +134,13 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
           Q6_1,
           Q7,
           Q8,
-          Q9,
+       /*   Q9,
           Q10,
-          Q10_1,
+          Q10_1, */
           Q11,
           Q12;
+
+          String Session_on;
 
 
 
@@ -344,9 +346,9 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
         Q6_1="0";
         Q7="0";
         Q8="0";
-        Q9="0";
+    /*    Q9="0";
         Q10="0";
-        Q10_1="0";
+        Q10_1="0"; */
         Q11="0";
         Q12="0";
 
@@ -381,7 +383,7 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
             Q8="1";
         }
 
-        if(rb_Q9_yes.isChecked())
+       /* if(rb_Q9_yes.isChecked())
         {
             Q9="1";
         }
@@ -395,7 +397,7 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
             Q10_1="1";
         }
 
-
+ */
         Q11=txt_Q11.getText().toString();
         Q12=txt_Q12.getText().toString();
 
@@ -423,9 +425,9 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
         Lv_Q6_1=(LinearLayout) findViewById(R.id.Lv_Q6_1);
         Lv_Q7=(LinearLayout) findViewById(R.id.Lv_Q7);
         Lv_Q8=(LinearLayout) findViewById(R.id.Lv_Q8);
-        Lv_Q9=(LinearLayout) findViewById(R.id.Lv_Q9);
-        Lv_Q10=(LinearLayout) findViewById(R.id.Lv_Q10);
-        Lv_Q10_1=(LinearLayout) findViewById(R.id.Lv_Q10_1);
+       // Lv_Q9=(LinearLayout) findViewById(R.id.Lv_Q9);
+       // Lv_Q10=(LinearLayout) findViewById(R.id.Lv_Q10);
+       // Lv_Q10_1=(LinearLayout) findViewById(R.id.Lv_Q10_1);
 
         Lv_Q11=(LinearLayout) findViewById(R.id.Lv_Q11);
 
@@ -450,12 +452,12 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
                 rb_Q7_no=(RadioButton)findViewById(R.id.  rb_Q7_no);
                 rb_Q8_yes=(RadioButton)findViewById(R.id. rb_Q8_yes);
                 rb_Q8_no=(RadioButton)findViewById(R.id.  rb_Q8_no);
-                rb_Q9_yes=(RadioButton)findViewById(R.id. rb_Q9_yes);
-                rb_Q9_no=(RadioButton)findViewById(R.id.  rb_Q9_no);
-                rb_Q10_yes=(RadioButton)findViewById(R.id.rb_Q10_yes);
-                rb_Q10_no=(RadioButton)findViewById(R.id. rb_Q10_no);
-        rb_Q10_1_yes=(RadioButton)findViewById(R.id.rb_Q10_1_yes);
-        rb_Q10_1_no=(RadioButton)findViewById(R.id. rb_Q10_1_no);
+             //   rb_Q9_yes=(RadioButton)findViewById(R.id. rb_Q9_yes);
+             //   rb_Q9_no=(RadioButton)findViewById(R.id.  rb_Q9_no);
+             //   rb_Q10_yes=(RadioButton)findViewById(R.id.rb_Q10_yes);
+             //   rb_Q10_no=(RadioButton)findViewById(R.id. rb_Q10_no);
+      //  rb_Q10_1_yes=(RadioButton)findViewById(R.id.rb_Q10_1_yes);
+      //  rb_Q10_1_no=(RadioButton)findViewById(R.id. rb_Q10_1_no);
 
 
 
@@ -552,17 +554,17 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
             return false;
         }
 
-        if (fun_avioid_empty_text(Lv_Q9) == false) {
-            return false;
-        }
-
-        if (fun_avioid_empty_text(Lv_Q10) == false) {
-            return false;
-        }
-
-        if (fun_avioid_empty_text(Lv_Q10_1) == false) {
-            return false;
-        }
+    //    if (fun_avioid_empty_text(Lv_Q9) == false) {
+    //        return false;
+    //    }
+//
+    //    if (fun_avioid_empty_text(Lv_Q10) == false) {
+    //        return false;
+    //    }
+//
+    //    if (fun_avioid_empty_text(Lv_Q10_1) == false) {
+    //        return false;
+    //    }
 
         if (fun_avioid_empty_text(Lv_Q11) == false) {
             return false;
@@ -594,7 +596,41 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
 
 
 
+if(put_extra==1)
+{
+    Session_on="Pregnancy";
 
+}
+        if(put_extra==2)
+        {
+            Session_on="DELIVERY";
+
+        }
+        if(put_extra==3)
+        {
+            Session_on="POSTNATALCARE";
+
+        }
+        if(put_extra==4)
+        {
+            Session_on="NEWBORN";
+
+        }
+        if(put_extra==5)
+        {
+            Session_on="MMUNIZATION";
+
+        }
+        if(put_extra==6)
+        {
+            Session_on="PNEUMONIA";
+
+        }
+        if(put_extra==7)
+        {
+            Session_on="Diarrhea";
+
+        }
 
 
 
@@ -609,7 +645,7 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
 
 
         String query = "insert into " +
-                "ttable("
+            "ttable("
                 +obj_tbl.Q1_1 +","
                 +obj_tbl.Q1 +","
                 +obj_tbl.Q2 +","
@@ -621,9 +657,9 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
                 +obj_tbl.Q6_1 +","
                 +obj_tbl.Q7 +","
                 +obj_tbl.Q8 +","
-                +obj_tbl.Q9 +","
-                +obj_tbl.Q10 +","
-                +obj_tbl.Q10_1 +","
+             //   +obj_tbl.Q9 +","
+             //   +obj_tbl.Q10 +","
+             //   +obj_tbl.Q10_1 +","
                 +obj_tbl.Q11 +","
                 +obj_tbl.Q12 +","
 
@@ -633,15 +669,118 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
 
                 +obj_tbl.userid +","
 
-                +obj_tbl.Interview_status +
+                +obj_tbl.Interview_status +","
+                +obj_tbl.sesssion+ "," +
+
+
+
+            "P1" +","+
+    "P2"+","+
+    "P3"+","+
+    "P4"+","+
+    "P5"+","+
+    "P6"+","+
+    "P7"+","+
+    "P8"+","+
+    "P9"+","+
+    "P10"+","+
+    "P11"+","+
+    "P12"+","+
+    "P12_1 "+","+
+    "P12_2 "+","+
+    "P12_3 "+","+
+    "P12_4 "+","+
+    "P12_5 "+","+
+    "P12_6 "+","+
+    "P12_7 "+","+
+    "P12_8 "+","+
+    "P12_9 "+","+
+    "P12_10"+","+
+    "P12_11"+","+
+    "P12_12"+","+
+    "P12_13"+","+
+    "P13"+","+
+    "D1"+","+
+    "D2"+","+
+    "D3"+","+
+    "D4"+","+
+    "D5"+","+
+    "D6"+","+
+    "D6_1  "+","+
+    "D6_2  "+","+
+    "D6_3  "+","+
+    "D6_4  "+","+
+    "D6_5  "+","+
+    "D6_6  "+","+
+    "D7"+","+
+    "D8"+","+
+    "PNC1  "+","+
+    "PNC2  "+","+
+    "PNC3  "+","+
+    "PNC4  "+","+
+    "PNC5  "+","+
+    "PNC5_1"+","+
+    "PNC5_2"+","+
+    "PNC5_3"+","+
+    "PNC6  "+","+
+    "PNC7  "+","+
+    "N1"+","+
+    "N2"+","+
+    "N3"+","+
+    "N4"+","+
+    "N5"+","+
+    "N6"+","+
+    "N7"+","+
+    "N8"+","+
+    "N9"+","+
+    "N10"+","+
+    "N11"+","+
+    "N12"+","+
+    "N13"+","+
+    "N14"+","+
+    "N15"+","+
+    "N16"+","+
+    "N17"+","+
+    "N18"+","+
+    "N19"+","+
+    "N20_1 "+","+
+    "N20_2 "+","+
+    "N20_3 "+","+
+    "N20_4 "+","+
+    "N20_5 "+","+
+    "N20_6 "+","+
+    "N20_7 "+","+
+    "N21"+","+
+    "N22"+","+
+    "I1"+","+
+    "I2"+","+
+    "I3"+","+
+    "I4"+","+
+    "DI1"+","+
+    "DI2"+","+
+    "DI3"+","+
+    "DI4"+","+
+    "DI5"+","+
+    "DI6"+","+
+    "DI7"+","+
+    "DI8"+","+
+    "DI9"+","+
+    "DI10  "+","+
+    "DI11  "+","+
+    "PN1"+","+
+    "PN2"+","+
+    "PN3"+","+
+    "PN4"+","+
+    "PN5"+","+
+    "PN6"+","+
+    "PN7"+
 
 
 
 
+    ")" +
 
-        ")" +
-
-                " values('"
+            " values('"
                 + Q1_1
                 + "','" +Q1
                 + "','" +Q2
@@ -654,9 +793,9 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
                 + "','" +Q6_1
                 + "','" +Q7
                 + "','" +Q8
-                + "','" +Q9
-                + "','" +Q10
-                + "','" +Q10_1
+             //   + "','" +Q9
+             //   + "','" +Q10
+             //   + "','" +Q10_1
                 + "','" +Q11
                 + "','" +Q12
 
@@ -664,16 +803,118 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
                 + "','" +Curent_date
                 + "','" +timeStamp
 
-                + "','" +"Uesrid"
+                + "','" +obj_tbl.userid
 
-                + "','" +"1'"
+                + "','"
+                +"1', '"
+                +Session_on +"',"+
 
-+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT',"+
+                "'EMPT'"+
 
 
 
 
-        ")";
+
+    ")";
 
 
         query = String.format(query);
@@ -727,17 +968,26 @@ public  class Main2Activity extends AppCompatActivity implements View.OnClickLis
 
 
 
-    List<String> ClusterDiscticNumber;
+    List<String> ClusterDiscticNumber=new ArrayList<>();
     public void GetClusterNumber() {
 
-        String District_from_pref = pref.getDistict();
+        String District_from_pref = pref.getLhwIds();
 
-        if (District_from_pref==null) {
+        if (District_from_pref!=null) {
 
-            District_from_pref = "Badin";
+            String[]  lhwids=District_from_pref.split("/");
+
+            for(int i=1;i<lhwids.length;i++)
+            {
+                ClusterDiscticNumber.add(lhwids[i]);
+            }
+        }
+        else
+        {
+            ClusterDiscticNumber.add("No Data ");
         }
 
-        ClusterDiscticNumber = ClustorDistricts.get(District_from_pref);
+
         ArrayAdapter<String> dataAdapterD = new ArrayAdapter<String>(Main2Activity.this,
                 android.R.layout.simple_spinner_item, ClusterDiscticNumber);
 

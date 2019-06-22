@@ -82,7 +82,7 @@
 
                         style="@style/TextView"
                         android:text="DELIVERY PREPAREDNESS
-Did LHW/CHW advise to participants/mothers (especially pregnant women)?
+Did Lady health worker/Community health worker advise to participants/mothers (especially pregnant women)?
  "
 
                         android:textColor="@color/black_overlay"
